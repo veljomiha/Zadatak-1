@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-blue: hsl(229, 23%, 23%);
+    --dark-grayish: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+body{
+    font-size: 18px; 
+    font-family: 'Kumbh Sans', kumbh-sans;
+    background-color: var(--dark-cyan);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+}
+
+.main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card{
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 350px;
+    position: relative;
+}
+
+
+/*----- CARD BODY -----*/
+.card-body{
+    text-align: center;
+    margin-top: -52px;
+}
+.div-prof-img > img{
+    border: 7px solid white;
+    border-radius: 50%;
+}
+.name-and-city{
+    padding: 25px 0;
+}
+.name{
+    font-weight:bold;
+    color: var(--very-dark-blue);
+}
+.age{
+    color: var(--dark-gray);
+    font-weight: normal;
+}
+.city{
+    color: hsl(0, 0%, 59%);
+    font-weight: normal;
+    
+}
+
+
+/*----- CARD FOOTER -----*/
+.card-footer{
+    border-top: 1px solid var(--dark-gray);
+    display: flex;
+    justify-content:space-around;
+    text-align: center;
+    padding: 25px 0;
+}
+.footer-number{
+    font-weight: bold;
+    color: var(--very-dark-blue);
+}
+.footer-text{
+    color: var(--dark-gray);
+    font-weight: normal;
+}
+
+
+/*----- CIRCLES (background) -----*/
+
+/*0-375px*/
+@media screen and (max-device-width: 375px){
+    body{
+    background-position: right 40vw bottom 46vh, left 40vw top 46vh;
+
+    }
+    .card{
+        width: 325px;   
+    }
+}
+
+/*376px-768px*/
+@media screen and (min-device-width: 376px){
+    body{
+    background-position: right 40vw bottom 52vh, left 40vw top 52vh;
+
+    }
+}
+
+/*769px-1440px*/
+@media screen and (min-device-width: 769px){
+    body{
+    background-position:right 40vw bottom 58vh, left 40vw top 58vh;
+
+    }
+}
+
+@media screen and (min-device-width: 1440px){
+    body{
+    background-position:right 40vw bottom 60vh, left 40vw top 60vh;
+
+    }
+}
+
+
+
+
+
+
